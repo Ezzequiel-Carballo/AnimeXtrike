@@ -54,7 +54,12 @@ class directorioController{
                 $imagen = $_FILES['imagen'];
                 $fileName = $imagen['name'];
                 $fileType = $imagen['type'];
-                
+
+                /*
+                if ($imagen['error'] !== UPLOAD_ERR_OK) {
+                // Handle the upload error
+                echo "File upload failed with error code: " . $imagen['error'];
+                */
                 $new ->setImage_path($fileName);
 
                 $save = $new->save();
